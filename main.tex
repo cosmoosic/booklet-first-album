@@ -1,0 +1,92 @@
+\documentclass{article}
+
+\usepackage{eso-pic,graphicx}
+\usepackage[top=2cm, bottom=2cm, paperwidth=8in, paperheight=8in]{geometry}
+
+\tracinglostchars=2
+\usepackage[UTF8, fontset=none]{ctex} %Chinese
+
+\setmainfont{URW Gothic L}[Scale=1.0]
+\setCJKmainfont{Noto Sans CJK SC}[Scale=1.0]
+
+\renewcommand{\abstractname}{Welcome to the world of Cosmoose!}
+%\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+
+\usepackage[version=4]{mhchem} %chemical
+
+\usepackage{verse}
+%\usepackage[numberpoems, clearpageafterpoem, useincipits]{poetrytex}
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+%\usepackage{kotex} %Korean
+
+\usepackage{hyperref} %hyperlinks
+
+\usepackage{tikz} %transparent background
+\usetikzlibrary{calc}
+\usepackage{graphicx}
+
+% Macros
+
+\newcommand{\bo}[1] {
+  \textbf{#1}}
+
+\newcommand{\bblu}[1] {
+  \textbf{\textcolor{blue}{#1}}}
+  
+\newcommand{\bckg} {
+	\tikz[overlay, remember picture] \draw [thick] 
+	([xshift=0.5cm,yshift=-0.5cm]current page.north west) rectangle 
+	([xshift=-0.5cm,yshift=0.5cm]current page.south east); %---making a coloured box 
+	
+	\begin{tikzpicture}[remember picture, overlay]
+	\node[opacity=0.6,inner sep=0pt] at (current page.center) {%
+	    \includegraphics[%
+	        width=\paperwidth,%
+	        height=\paperheight%
+	    ]{Assets/diejager_space}%
+	}; %--- Including the background picture
+	\end{tikzpicture}
+}
+% https://tex.stackexchange.com/questions/485283/setting-transparency-of-background-picture-in-latex
+
+
+\begin{document}
+
+%% title page
+\phantom{;}
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cosmoose_cover}}
+
+%\clearpage
+%\phantom{;}
+%\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cover_eng}}
+
+\clearpage
+
+\input{Input/Intro_Through_The_Starfields}
+\input{Input/Eyes_Wide_Open}
+\input{Input/Conquer_You}
+\input{Input/Die_Jager}
+\input{Input/Interlude_Chicken_Wings_for_Everyone}
+\input{Input/How_June_And_RuD_Met}
+\input{Input/QT5PY}
+\input{Input/C6H12O6}
+\input{Input/Interlude_C125H188O80}
+\input{Input/Escape}
+\input{Input/Outro_Meng}
+
+\vspace*{\fill}
+\includegraphics[width=.7\paperwidth]{Assets/cosmoose_cover_drawz}
+
+\phantom{*}\\
+Composition, Mixing, Mastering, Vocals, Topline, Lyrics: DHXP\\
+Vocals, Topline, Lyrics (except `Conquer You'): Flora Lin, JJYY\\
+Vocals, Topline, Lyrics for `Conquer You': Camoragi, Star Smash\\
+Additional vocals for `How June and Ru D. met': Camoragi\\
+Illustrations: Woolion\\
+Booklet: Flora Lin
+
+\end{document}
+

@@ -36,21 +36,27 @@
 \newcommand{\bblu}[1] {
   \textbf{\textcolor{blue}{#1}}}
   
-\newcommand{\bckg} {
-	\tikz[overlay, remember picture] \draw [thick] 
-	([xshift=0.5cm,yshift=-0.5cm]current page.north west) rectangle 
-	([xshift=-0.5cm,yshift=0.5cm]current page.south east); %---making a coloured box 
-	
-	\begin{tikzpicture}[remember picture, overlay]
-	\node[opacity=0.6,inner sep=0pt] at (current page.center) {%
-	    \includegraphics[%
-	        width=\paperwidth,%
-	        height=\paperheight%
-	    ]{Assets/diejager_space}%
-	}; %--- Including the background picture
-	\end{tikzpicture}
-}
+%\newcommand{\bckg} {
+%	\tikz[overlay, remember picture] \draw [thick] 
+%	([xshift=0.5cm,yshift=-0.5cm]current page.north west) rectangle 
+%	([xshift=-0.5cm,yshift=0.5cm]current page.south east); %---making a coloured box 
+%	
+%	\begin{tikzpicture}[remember picture, overlay]
+%	\node[opacity=0.6,inner sep=0pt] at (current page.center) {%
+%	    \includegraphics[%
+%	        width=\paperwidth,%
+%	        height=\paperheight%
+%	    ]{Assets/diejager_space}%
+%	}; %--- Including the background picture
+%	\end{tikzpicture}
+%}
 % https://tex.stackexchange.com/questions/485283/setting-transparency-of-background-picture-in-latex
+
+%Korean spaces
+\newcommand{\ks}{
+  \hspace{.5pt}}
+
+\newcommand{\bckg}[1]{\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{#1}}}
 
 
 \begin{document}
@@ -77,16 +83,24 @@
 \input{Input/Escape}
 \input{Input/Outro_Meng}
 
+\bckg{Assets/diejager_space_bw}
 \vspace*{\fill}
 \includegraphics[width=.7\paperwidth]{Assets/cosmoose_cover_drawz}
 
 \phantom{*}\\
-Composition, Mixing, Mastering, Vocals, Topline, Lyrics: DHXP\\
+Composition, Production, Vocals, Topline, Lyrics: DHXP\\
 Vocals, Topline, Lyrics (except `Conquer You'): Flora Lin, JJYY\\
 Vocals, Topline, Lyrics for `Conquer You': Camoragi, Star Smash\\
 Additional vocals for `How June and Ru D. met': Camoragi\\
 Illustrations: Woolion\\
 Booklet: Flora Lin
+
+\phantom{*}\\
+Special Thanks: TODO
+%Sam, Jorchime... LockModern if MV in bandcamp
+%IMF, Cosmoonauts
+% all those who support us
+% Inco
 
 \end{document}
 

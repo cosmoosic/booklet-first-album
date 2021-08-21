@@ -28,13 +28,18 @@
 \usetikzlibrary{calc}
 \usepackage{graphicx}
 
+\definecolor{darkcyan}{rgb}{0.07, 0.26, 0.26}
+\definecolor{darksienna}{rgb}{0.24, 0.08, 0.08}
+	
 % Macros
 
 \newcommand{\bo}[1] {
   \textbf{#1}}
 
 \newcommand{\bblu}[1] {
-  \textbf{\textcolor{blue}{#1}}}
+  \textbf{\textcolor{darkcyan}{#1}}}
+  
+\newcommand{\bbro}[1] {\textbf{\textcolor{darksienna}{#1}}}
   
 %\newcommand{\bckg} {
 %	\tikz[overlay, remember picture] \draw [thick] 
@@ -64,7 +69,7 @@
 
 %% title page
 \phantom{;}
-\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cosmoose_cover}}
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cosmoose_cover_small}}
 
 %\clearpage
 %\phantom{;}
@@ -83,28 +88,7 @@
 \input{Input/Interlude_C125H188O80}
 \input{Input/Escape}
 \input{Input/Outro_Meng}
-
-%\bckg{Assets/diejager_space/diejager_space_bw}
-%\bckg{Assets/diejager_space_smaller/diejager_space_bw}
-\bckg{Assets/diejager_space_extrasmaller/diejager_space_bw}
-
-\vspace*{\fill}
-\includegraphics[width=.7\paperwidth]{Assets/cosmoose_cover_drawz}
-
-\phantom{*}\\
-Composition, Production, Vocals, Topline, Lyrics: \href{https://linktr.ee/dhxp}{DHXP}\\
-Vocals, Topline, Lyrics (except `Conquer You'): \href{https://www.youtube.com/channel/UC7pM7YKe9U1D1Xl4s_xroBw}{Flora Lin}, \href{https://soundcloud.com/okfeather}{JJYY} \\
-Vocals, Topline, Lyrics for `Conquer You': \href{https://camoragi.bandcamp.com/}{Camoragi} , \href{https://soundcloud.com/starsmashofficial}{Star Smash} \\
-Additional vocals for `How June and Ru D. met': Camoragi\\
-Illustrations: \href{https://www.pixiv.net/en/users/6200150}{Woolion}\\
-Booklet: Flora Lin
-
-\phantom{*}\\
-Special Thanks: TODO
-%Sam, Jorchime... LockModern if MV in bandcamp
-%IMF, Cosmoonauts
-% all those who support us
-% Inco
+\input{Input/Special_Thanks_Credits}
 
 \end{document}
 

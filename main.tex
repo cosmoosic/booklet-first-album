@@ -13,22 +13,17 @@
 \setCJKmainfont{Noto Sans CJK SC}[Scale=1.0]
 
 \renewcommand{\abstractname}{Welcome to the world of Cosmoose!}
-%\usepackage[T1]{fontenc}
 \usepackage{xcolor}
 
 
 \usepackage[version=4]{mhchem} %chemical
 
 \usepackage{verse}
-%\usepackage[numberpoems, clearpageafterpoem, useincipits]{poetrytex}
 \pagenumbering{gobble}
 \setlength\parindent{0pt}
-%\usepackage{kotex} %Korean
 
 \usepackage{hyperref} %hyperlinks
 
-\usepackage{tikz} %transparent background
-\usetikzlibrary{calc}
 \usepackage{graphicx}
 
 \definecolor{darkcyan}{rgb}{0.07, 0.26, 0.26}
@@ -43,22 +38,6 @@
   \textbf{\textcolor{darkcyan}{#1}}}
   
 \newcommand{\bbro}[1] {\textbf{\textcolor{darksienna}{#1}}}
-  
-%\newcommand{\bckg} {
-%	\tikz[overlay, remember picture] \draw [thick] 
-%	([xshift=0.5cm,yshift=-0.5cm]current page.north west) rectangle 
-%	([xshift=-0.5cm,yshift=0.5cm]current page.south east); %---making a coloured box 
-%	
-%	\begin{tikzpicture}[remember picture, overlay]
-%	\node[opacity=0.6,inner sep=0pt] at (current page.center) {%
-%	    \includegraphics[%
-%	        width=\paperwidth,%
-%	        height=\paperheight%
-%	    ]{Assets/diejager_space}%
-%	}; %--- Including the background picture
-%	\end{tikzpicture}
-%}
-% https://tex.stackexchange.com/questions/485283/setting-transparency-of-background-picture-in-latex
 
 %Korean spaces
 \newcommand{\ks}{
@@ -73,10 +52,6 @@
 %% title page
 \phantom{;}
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cosmoose_cover_subtitle}}
-
-%\clearpage
-%\phantom{;}
-%\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{Assets/cover_eng}}
 
 \clearpage
 
